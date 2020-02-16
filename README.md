@@ -16,7 +16,6 @@
 ## To investigate
 
 - More testing tools
-  - e2e
 - Networking
   - Axios
   - GraphQL?
