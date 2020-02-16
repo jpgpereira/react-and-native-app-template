@@ -1,1 +1,1 @@
-import './src/startup'
+import './src/startup';

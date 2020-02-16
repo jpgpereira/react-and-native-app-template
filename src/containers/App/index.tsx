@@ -1,6 +1,6 @@
-import React from "react";
-import Container from "src/components/Container";
-import Title from "src/components/Title";
+import React from 'react';
+import Container from 'src/components/Container';
+import Title from 'src/components/Title';
 
 function App() {
   return (
