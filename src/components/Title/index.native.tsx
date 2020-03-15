@@ -14,7 +14,7 @@ const Title = ({style, text}: TitleProps) => {
 
 const StyledTitle = styled(Title)`
   ${styles}
-  font-size: 48px;
+  font-size: 42px;
 `;
 
 export default StyledTitle;

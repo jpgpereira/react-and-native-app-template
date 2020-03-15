@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import tw from 'twin.macro';
 import styles from './styles';
 
 type TitleProps = {
@@ -13,6 +14,7 @@ const Title = ({className, text}: TitleProps) => {
 
 const StyledTitle = styled(Title)`
   ${styles}
+  ${tw`font-sans text-4xl`}
 `;
 
 export default StyledTitle;

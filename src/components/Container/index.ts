@@ -1,10 +1,10 @@
 import styled from 'styled-components';
+import tw from 'twin.macro';
 import styles from './styles';
 
 const Container = styled.div`
   ${styles}
-  min-height: 100vh;
-  display: flex;
+  ${tw`h-screen`}
 `;
 
 export default Container;
