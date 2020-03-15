@@ -1,29 +1,14 @@
-## Libraries
-
-[41 Best React Native Libraries to Use in Your Next Project](https://rubygarage.org/blog/react-native-best-libraries)
-
-- Jest
-- Axios
-- Redux
-- Redux Persist
-- Redux Logger
-- Redux Saga
-- Reselect
-- Ramda
-- Moment
+# App Template - React + React Native
 
 ## To investigate
 
-- More testing tools
-- Networking
-  - Axios
-  - GraphQL?
+- Testing tools
+  - Jest
 - Navigation
   - React Router
   - React Navigation
 - Localization
 - More utils
-  - Validate.js
 
 ## Available Scripts
 
