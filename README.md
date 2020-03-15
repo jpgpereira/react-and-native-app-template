@@ -11,7 +11,6 @@
 - Reselect
 - Ramda
 - Moment
-- Storybook
 
 ## To investigate
 
@@ -22,8 +21,6 @@
 - Navigation
   - React Router
   - React Navigation
-- Styles
-  - Styled Components
 - Localization
 - More utils
   - Validate.js
