@@ -6,5 +6,4 @@ export default {
   component: Title,
 };
 
-export const Cenas = () => <Title text="Cenas" />;
-export const Coiso = () => <Title text="Coiso" />;
+export const ExampleTitle = () => <Title text="Example Title" />;
