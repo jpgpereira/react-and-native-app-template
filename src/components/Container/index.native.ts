@@ -1,8 +1,16 @@
-import styled from 'styled-components/native';
-import styles from './styles';
+import styled from '@emotion/native';
+import {t} from 'react-native-tailwindcss';
 
 const Container = styled.View`
-  ${styles}
+  ${[
+    t.flex,
+    t.flex1,
+    t.flexCol,
+    t.justifyCenter,
+    t.itemsCenter,
+    t.hFull,
+    t.bgGreen200,
+  ]}
 `;
 
 export default Container;

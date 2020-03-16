@@ -1,20 +1,17 @@
 import React from 'react';
-import {Text} from 'react-native';
-import styled from 'styled-components/native';
-import styles from './styles';
+import styled from '@emotion/native';
+import {t} from 'react-native-tailwindcss';
 
 type TitleProps = {
-  style?: object;
   text: string;
 };
 
-const Title = ({style, text}: TitleProps) => {
-  return <Text style={style}>{text}</Text>;
+const Title = ({text}: TitleProps) => {
+  return <StyledTitle>{text}</StyledTitle>;
 };
 
-const StyledTitle = styled(Title)`
-  ${styles}
-  font-size: 42px;
+const StyledTitle = styled.Text`
+  ${[t.fontBold, t.textOrange500, t.m0, t.text4xl]}
 `;
 
-export default StyledTitle;
+export default Title;

@@ -9,6 +9,8 @@
   - React Navigation
 - Localization
 - More utils
+  - react-native-typography
+  - responsive-dimensions
 
 ## Available Scripts
 

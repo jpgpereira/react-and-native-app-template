@@ -1,10 +1,13 @@
-import styled from 'styled-components';
 import tw from 'twin.macro';
-import styles from './styles';
 
-const Container = styled.div`
-  ${styles}
-  ${tw`h-screen`}
+const Container = tw.div`
+  flex
+  flex-col
+  justify-center
+  items-center
+  bg-green-200
+  h-screen
+  flex-1
 `;
 
 export default Container;
