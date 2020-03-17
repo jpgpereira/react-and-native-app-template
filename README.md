@@ -4,9 +4,6 @@
 
 - Testing tools
   - Jest
-- Navigation
-  - React Router
-  - React Navigation
 - Localization
 - More utils
   - react-native-typography
