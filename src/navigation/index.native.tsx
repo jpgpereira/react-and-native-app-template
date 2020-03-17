@@ -9,7 +9,7 @@ import Screens from '../screens';
 const AuthStack = createStackNavigator();
 
 const AuthStackScreen = () => (
-  <AuthStack.Navigator>
+  <AuthStack.Navigator headerMode="none">
     <AuthStack.Screen
       name="SignIn"
       component={Screens.SignIn}
@@ -26,7 +26,7 @@ const AuthStackScreen = () => (
 const HomeStack = createStackNavigator();
 
 const HomeStackScreen = () => (
-  <HomeStack.Navigator>
+  <HomeStack.Navigator headerMode="none">
     <HomeStack.Screen name="Home" component={Screens.Home} />
   </HomeStack.Navigator>
 );
