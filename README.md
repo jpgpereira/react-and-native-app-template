@@ -25,18 +25,6 @@
 - react-native-typography
 - responsive-dimensions
 
-"android": "react-native run-android"  
-"ios": "react-native run-ios"  
-"native": "react-native start"  
-"test": "jest"  
-"web": "react-scripts start"  
-"build": "react-scripts build"  
-"eject": "react-scripts eject"  
-"prettier": "prettier --write '**/*.{ts,js,jsx,tsx,css,html}'"  
-"lint": "eslint . --ext .js,.jsx,.ts,.tsx"  
-"storybook": "start-storybook -p 9009 -s public"  
-"build-storybook": "build-storybook -s public"
-
 ## Available Scripts
 
 In the project directory, you can run:
