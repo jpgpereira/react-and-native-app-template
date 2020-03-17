@@ -17,8 +17,9 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.7",
-    "@react-navigation/native": "^5.0.9",
-    "@react-navigation/stack": "^5.1.1",
+    "@react-navigation/native": "^5.0.10",
+    "@react-navigation/stack": "^5.2.0",
+    "@react-navigation/web": "^1.0.0-alpha.9",
     "@types/redux-logger": "^3.0.7",
     "axios": "^0.19.2",
     "moment": "^2.24.0",
@@ -74,7 +75,7 @@
     "metro-react-native-babel-preset": "^0.56.0",
     "react-test-renderer": "16.9.0",
     "twin.macro": "^1.0.0-alpha.7",
-    "typescript": "^3.7.3"
+    "typescript": "^3.8.3"
   },
   "jest": {
     "preset": "react-native",
