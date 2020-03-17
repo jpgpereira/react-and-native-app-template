@@ -5,6 +5,7 @@
 - Testing tools
   - Jest
 - Localization
+  - react-i18next
 - More utils
   - react-native-typography
   - responsive-dimensions

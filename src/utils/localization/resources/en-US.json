@@ -1,0 +1,25 @@
+{
+  "translation": {
+    "screens": {
+      "home": {
+        "title": "Home Screen"
+      },
+      "signIn": {
+        "title": "Sign In Screen"
+      },
+      "signUp": {
+        "title": "Sign Up Screen"
+      }
+    },
+    "buttons": {
+      "authentication": {
+        "signIn": "Sign In",
+        "signUp": "Sign Up",
+        "signOut": "Sign Out"
+      }
+    },
+    "messages": {
+      "loading": "Loading..."
+    }
+  }
+}

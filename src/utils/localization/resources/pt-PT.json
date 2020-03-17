@@ -1,0 +1,25 @@
+{
+  "translation": {
+    "screens": {
+      "home": {
+        "title": "Ecrã Home"
+      },
+      "signIn": {
+        "title": "Ecrã Sign In"
+      },
+      "signUp": {
+        "title": "Ecrã Sign Up"
+      }
+    },
+    "buttons": {
+      "authentication": {
+        "signIn": "Entrar",
+        "signUp": "Registar",
+        "signOut": "Sair"
+      }
+    },
+    "messages": {
+      "loading": "A carregar..."
+    }
+  }
+}
