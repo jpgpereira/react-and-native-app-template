@@ -11,7 +11,6 @@ const Title = ({text}: TitleProps) => {
 
 const StyledTitle = tw.h1`
   font-bold
-  text-orange-500
   m-0
   font-sans
   text-4xl

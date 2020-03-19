@@ -16,7 +16,7 @@ const Button = ({text, onPress}: ButtonProps) => {
 };
 
 const ButtonContainer = styled.TouchableOpacity`
-  ${[t.rounded, t.bgBlue500, t.borderTransparent]}
+  ${[t.rounded, t.bgBlack, t.borderTransparent]}
 `;
 
 const ButtonText = styled.Text`

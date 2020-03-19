@@ -17,12 +17,14 @@ const Button = ({className, text, onPress}: ButtonProps) => {
 
 const StyledButton = tw.button`
   text-white
-  bg-blue-500
+  bg-black
   border-transparent
   font-sans
   py-2
   px-4
-  hover:bg-blue-700
+  hover:bg-white
+  hover:text-black
+  hover:border-black
   rounded
 `;
 

@@ -5,7 +5,6 @@ const Container = tw.div`
   flex-col
   justify-center
   items-center
-  bg-green-200
   h-screen
   flex-1
 `;

@@ -9,7 +9,6 @@ const Container = styled.View`
     t.justifyCenter,
     t.itemsCenter,
     t.hFull,
-    t.bgGreen200,
   ]}
 `;
 

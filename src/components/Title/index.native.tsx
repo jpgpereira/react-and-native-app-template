@@ -11,7 +11,7 @@ const Title = ({text}: TitleProps) => {
 };
 
 const StyledTitle = styled.Text`
-  ${[t.fontBold, t.textOrange500, t.m0, t.text4xl]}
+  ${[t.fontBold, t.m0, t.text4xl]}
 `;
 
 export default Title;
