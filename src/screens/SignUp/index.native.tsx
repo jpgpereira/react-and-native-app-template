@@ -1,7 +1,7 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
 
-import Container from '../../components/Container';
+import AuthLayout from '../../layouts/Auth';
 import Title from '../../components/Title';
 import Button from '../../components/Button';
 
@@ -11,7 +11,7 @@ const SignUp = ({navigation}) => {
   const {signUp} = React.useContext(AuthContext);
   const {t} = useTranslation();
   return (
-    <Container>
+    <AuthLayout>
       <Title text={t('screens.signUp.title')} />
       <Button
         text={t('buttons.authentication.signUp')}
@@ -21,7 +21,7 @@ const SignUp = ({navigation}) => {
         text={t('buttons.authentication.signIn')}
         onPress={() => navigation.goBack()}
       />
-    </Container>
+    </AuthLayout>
   );
 };
 

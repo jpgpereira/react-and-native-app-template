@@ -1,24 +1,36 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
+import {connect} from 'react-redux';
 
-import Container from '../components/Container';
+import {AuthContext} from '../reducer/context';
+import {actions as sidebarActions} from '../features/common/ui/sidebar';
+import AppLayout from '../layouts/App';
 import Title from '../components/Title';
 import Button from '../components/Button';
 
-import {AuthContext} from '../reducer/context';
-
-const Home = () => {
+const Home = ({openMenu, closeMenu}) => {
   const {signOut} = React.useContext(AuthContext);
   const {t} = useTranslation();
   return (
-    <Container>
+    <AppLayout>
       <Title text={t('screens.home.title')} />
       <Button
         text={t('buttons.authentication.signOut')}
         onPress={() => signOut()}
       />
-    </Container>
+      <Button text="Open Menu" onPress={openMenu} />
+      <Button text="Close Menu" onPress={closeMenu} />
+    </AppLayout>
   );
 };
 
-export default Home;
+const {open, close} = sidebarActions;
+const mapDispatchToProps = {
+  openMenu: open,
+  closeMenu: close,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(Home);

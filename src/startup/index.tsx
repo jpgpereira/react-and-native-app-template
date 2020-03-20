@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from 'src/navigation';
+import App from '../containers/App';
 import 'normalize.css';
-import '../utils/localization';
+import '../services/localization';
 
 ReactDOM.render(<App />, document.getElementById('root'));

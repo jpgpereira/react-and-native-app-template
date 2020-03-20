@@ -2,7 +2,7 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
 
-import Container from '../../components/Container';
+import AuthLayout from '../../layouts/Auth';
 import Title from '../../components/Title';
 import Button from '../../components/Button';
 
@@ -13,7 +13,7 @@ const SignIn = () => {
   const history = useHistory();
   const {t} = useTranslation();
   return (
-    <Container>
+    <AuthLayout>
       <Title text={t('screens.signIn.title')} />
       <Button
         text={t('buttons.authentication.signUp')}
@@ -23,7 +23,7 @@ const SignIn = () => {
         text={t('buttons.authentication.signIn')}
         onPress={() => signIn()}
       />
-    </Container>
+    </AuthLayout>
   );
 };
 
