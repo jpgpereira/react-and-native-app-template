@@ -8,7 +8,7 @@ import persistConfig from './persistor';
 
 const middlewares: any = [thunk];
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' && process.env.PUBLIC_URL) {
   const logger = createLogger({colors: {}});
   middlewares.push(logger);
 }
