@@ -1,9 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
 
-type HeaderProps = {};
-
-const Header = ({}: HeaderProps) => {
+const Header = () => {
   return <StyledHeader>header</StyledHeader>;
 };
 

@@ -2,9 +2,7 @@ import React from 'react';
 import styled from '@emotion/native';
 import {t} from 'react-native-tailwindcss';
 
-type HeaderProps = {};
-
-const Header = ({}: HeaderProps) => {
+const Header = () => {
   return <StyledHeader>header</StyledHeader>;
 };
 
