@@ -1,8 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import {AuthContext} from '../reducer/context';
-
+import {connect} from 'react-redux';
 import Screens from '../screens';
+import {selectors as authSelectors} from '../features/auth';
 
 const AuthRouter = () => (
   <Switch>
@@ -23,44 +23,22 @@ const AppRouter = () => (
   </Switch>
 );
 
-const MainRouter = ({userToken}) => {
-  return <Router>{userToken ? <AppRouter /> : <AuthRouter />}</Router>;
+const MainRouter = ({isLoggedIn}) => {
+  return <Router>{isLoggedIn ? <AppRouter /> : <AuthRouter />}</Router>;
 };
 
-export default () => {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [userToken, setUserToken] = React.useState('');
-
-  const authContext = React.useMemo(() => {
-    return {
-      signIn: () => {
-        setIsLoading(false);
-        setUserToken('asdf');
-      },
-      signUp: () => {
-        setIsLoading(false);
-        setUserToken('asdf');
-      },
-      signOut: () => {
-        setIsLoading(false);
-        setUserToken('');
-      },
-    };
-  }, []);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
-  if (isLoading) {
+const Navigator = ({rehydrated, isLoggedIn}) => {
+  if (!rehydrated) {
     return <Screens.Splash />;
   }
 
-  return (
-    <AuthContext.Provider value={authContext}>
-      <MainRouter userToken={userToken} />
-    </AuthContext.Provider>
-  );
+  return <MainRouter isLoggedIn={isLoggedIn} />;
 };
+
+const mapStateToProps = state => {
+  console.log(state);
+  const isLoggedIn = authSelectors.isLoggedIn(state);
+  return {isLoggedIn};
+};
+
+export default connect(mapStateToProps)(Navigator);

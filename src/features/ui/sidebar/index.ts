@@ -1,4 +1,4 @@
-import reducer from './reducers';
+import reducer from './reducer';
 
 export {default as selectors} from './selectors';
 export {default as types} from './types';

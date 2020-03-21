@@ -1,6 +1,6 @@
 import React from 'react';
 import tw from 'twin.macro';
-import Sidebar from '../../features/common/ui/sidebar/containers/Sidebar';
+import Sidebar from '../../features/ui/sidebar/containers/Sidebar';
 import Header from '../../components/Header';
 
 type LayoutProps = {

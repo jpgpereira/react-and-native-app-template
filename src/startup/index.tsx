@@ -9,8 +9,8 @@ import '../services/localization';
 
 const App = () => (
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <Router />
+    <PersistGate persistor={persistor}>
+      {rehydrated => <Router rehydrated={rehydrated} />}
     </PersistGate>
   </Provider>
 );

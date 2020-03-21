@@ -11,7 +11,7 @@ import {name as appName} from '../../app.json';
 const App = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <Router />
+      {rehydrated => <Router rehydrated={rehydrated} />}
     </PersistGate>
   </Provider>
 );

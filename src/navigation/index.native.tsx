@@ -1,10 +1,9 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-
-import {AuthContext} from '../reducer/context';
-
+import {connect} from 'react-redux';
 import Screens from '../screens';
+import {selectors as authSelectors} from '../features/auth';
 
 const AuthStack = createStackNavigator();
 
@@ -32,9 +31,9 @@ const HomeStackScreen = () => (
 );
 
 const RootStack = createStackNavigator();
-const RootStackScreen = ({userToken}) => (
+const RootStackScreen = ({isLoggedIn}) => (
   <RootStack.Navigator headerMode="none">
-    {userToken ? (
+    {isLoggedIn ? (
       <RootStack.Screen
         name="App"
         component={HomeStackScreen}
@@ -50,42 +49,21 @@ const RootStackScreen = ({userToken}) => (
   </RootStack.Navigator>
 );
 
-export default () => {
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [userToken, setUserToken] = React.useState('');
-
-  const authContext = React.useMemo(() => {
-    return {
-      signIn: () => {
-        setIsLoading(false);
-        setUserToken('asdf');
-      },
-      signUp: () => {
-        setIsLoading(false);
-        setUserToken('asdf');
-      },
-      signOut: () => {
-        setIsLoading(false);
-        setUserToken('');
-      },
-    };
-  }, []);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, []);
-
-  if (isLoading) {
+const Navigator = ({rehydrated, isLoggedIn}) => {
+  if (!rehydrated) {
     return <Screens.Splash />;
   }
 
   return (
-    <AuthContext.Provider value={authContext}>
-      <NavigationContainer>
-        <RootStackScreen userToken={userToken} />
-      </NavigationContainer>
-    </AuthContext.Provider>
+    <NavigationContainer>
+      <RootStackScreen isLoggedIn={isLoggedIn} />
+    </NavigationContainer>
   );
 };
+
+const mapStateToProps = state => {
+  const isLoggedIn = authSelectors.isLoggedIn(state);
+  return {isLoggedIn};
+};
+
+export default connect(mapStateToProps)(Navigator);

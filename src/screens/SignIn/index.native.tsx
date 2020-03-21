@@ -1,14 +1,13 @@
 import React from 'react';
 import {useTranslation} from 'react-i18next';
+import {connect} from 'react-redux';
 
 import AuthLayout from '../../layouts/Auth';
+import {actions as authActions} from '../../features/auth/example';
 import Title from '../../components/Title';
 import Button from '../../components/Button';
 
-import {AuthContext} from '../../reducer/context';
-
-const SignIn = ({navigation}) => {
-  const {signIn} = React.useContext(AuthContext);
+const SignIn = ({navigation, signIn}) => {
   const {t} = useTranslation();
   return (
     <AuthLayout>
@@ -17,12 +16,17 @@ const SignIn = ({navigation}) => {
         text={t('buttons.authentication.signUp')}
         onPress={() => navigation.push('SignUp')}
       />
-      <Button
-        text={t('buttons.authentication.signIn')}
-        onPress={() => signIn()}
-      />
+      <Button text={t('buttons.authentication.signIn')} onPress={signIn} />
     </AuthLayout>
   );
 };
 
-export default SignIn;
+const {signInExample} = authActions;
+const mapDispatchToProps = {
+  signIn: signInExample,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(SignIn);
