@@ -1,25 +1,32 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import {connect} from 'react-redux';
 import Screens from '../screens';
 import {selectors as authSelectors} from '../features/auth';
 
 const AuthRouter = () => (
   <Switch>
+    <Route path="/sign-in">
+      <Screens.SignIn />
+    </Route>
     <Route path="/sign-up">
       <Screens.SignUp />
     </Route>
-    <Route path="/">
-      <Screens.SignIn />
-    </Route>
+    <Redirect to="/sign-in" />
   </Switch>
 );
 
 const AppRouter = () => (
   <Switch>
-    <Route path="/">
+    <Route path="/home">
       <Screens.Home />
     </Route>
+    <Redirect to="/home" />
   </Switch>
 );
 
@@ -36,7 +43,6 @@ const Navigator = ({rehydrated, isLoggedIn}) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
   const isLoggedIn = authSelectors.isLoggedIn(state);
   return {isLoggedIn};
 };
