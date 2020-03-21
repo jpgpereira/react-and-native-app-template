@@ -8,12 +8,12 @@
 - [x] React Router
 - [x] Localization
 - [ ] Axios
-- [ ] Redux
-- [ ] Redux-persist
-- [ ] Redux-logger
-- [ ] Redux-thunk
+- [x] Redux
+- [x] Redux-persist
+- [x] Redux-logger
+- [x] Redux-thunk
 - [ ] Redux-saga
-- [ ] Reselect
+- [x] Reselect
 - [ ] Jest
 - [ ] React testing library
 - [ ] React Native testing library
